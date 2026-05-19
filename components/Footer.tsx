@@ -17,7 +17,7 @@ export default function Footer() {
               <div className="leading-tight">
                 <span className="block text-white font-bold text-base">ROASA</span>
                 <span className="block text-gold-400 text-xs font-medium tracking-wider uppercase">
-                  Plumbing & Electrical
+                  Plumbing Inc.
                 </span>
               </div>
             </div>

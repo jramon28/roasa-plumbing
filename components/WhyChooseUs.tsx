@@ -2,11 +2,11 @@ import { ShieldCheck, Clock, DollarSign, Star, UserCheck, Phone, Medal, Heart } 
 
 const BADGES: { icon?: React.ComponentType<{ className?: string }>; glyph?: string; label: string }[] = [
   { glyph: "✝", label: "Christ-Centered" },
-  { icon: Medal, label: "Retired Military" },
   { icon: Heart, label: "Husband & Father" },
   { icon: Star, label: "6 Years Experience" },
   { icon: ShieldCheck, label: "Licensed & Insured" },
   { icon: UserCheck, label: "Owner on Every Job" },
+  { icon: Medal, label: "5-Star Rated" },
 ];
 
 const REASONS = [
@@ -60,19 +60,19 @@ export default function WhyChooseUs() {
             {/* Left: intro */}
             <div>
               <span className="inline-block text-gold-600 text-sm font-semibold uppercase tracking-wider mb-3">
-                About Me
+                About Us
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
-                Hi, I'm Darell Roasa
+                Roasa Plumbing Inc.
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                I'm a Christian man, a retired military veteran, a husband, and a proud father to three beautiful daughters. Everything I do is rooted in integrity, hard work, and faith.
+                Roasa Plumbing Inc. is a Christ-centered, owner-operated plumbing company serving homeowners and businesses throughout San Diego County.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                With over 6 years of hands-on plumbing experience, I started Roasa Plumbing Inc. to serve San Diego homeowners the way I'd want to be served — with honesty, respect, and craftsmanship that lasts.
+                With over 6 years of hands-on experience, we built this business on a simple foundation: show up on time, do the job right, charge a fair price, and treat every customer with respect.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                When you call me, you're not getting a call center or a stranger. You're getting someone who cares about your home, your family, and doing the job right the first time.
+                From leak repairs and drain cleaning to full repiping and water heater installation, Roasa Plumbing is the trusted name San Diego calls when it matters most.
               </p>
               <a
                 href="#contact"
