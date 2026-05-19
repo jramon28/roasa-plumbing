@@ -1,7 +1,7 @@
-import { ShieldCheck, Clock, DollarSign, Star, UserCheck, Phone, Plus, Medal, Heart } from "lucide-react";
+import { ShieldCheck, Clock, DollarSign, Star, UserCheck, Phone, Medal, Heart } from "lucide-react";
 
-const BADGES = [
-  { icon: Plus, label: "Christ-Centered" },
+const BADGES: { icon?: React.ComponentType<{ className?: string }>; glyph?: string; label: string }[] = [
+  { glyph: "✝", label: "Christ-Centered" },
   { icon: Medal, label: "Retired Military" },
   { icon: Heart, label: "Husband & Father" },
   { icon: Star, label: "6 Years Experience" },
@@ -84,13 +84,16 @@ export default function WhyChooseUs() {
 
             {/* Right: badge grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {BADGES.map(({ icon: Icon, label }) => (
+              {BADGES.map(({ icon: Icon, glyph, label }) => (
                 <div
                   key={label}
                   className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex flex-col items-center text-center gap-3"
                 >
                   <div className="w-12 h-12 bg-gold-500/10 rounded-xl flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-gold-500" />
+                    {glyph
+                      ? <span className="text-2xl text-gold-500">{glyph}</span>
+                      : Icon && <Icon className="w-6 h-6 text-gold-500" />
+                    }
                   </div>
                   <p className="text-navy-900 font-semibold text-sm">{label}</p>
                 </div>
@@ -108,7 +111,7 @@ export default function WhyChooseUs() {
               Why ROASA
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">
-              San Diego's Most Trusted Plumber
+              A Plumber You Can Rely On
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
