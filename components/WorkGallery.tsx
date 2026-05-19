@@ -2,32 +2,32 @@ import Image from "next/image";
 
 const PHOTOS = [
   {
-    src: "/gallery/water-heater.jpg",
+    src: "/gallery/water-heater.JPG",
     caption: "Water Heater Installation",
     description: "Bradford White tank install with copper supply lines",
   },
   {
-    src: "/gallery/repiping.jpg",
+    src: "/gallery/repiping.JPG",
     caption: "Repiping",
     description: "Full copper repipe. Old lines out, new lines in.",
   },
   {
-    src: "/gallery/valve-repair.jpg",
+    src: "/gallery/valve-repair.JPG",
     caption: "Leak & Valve Repair",
     description: "Shower valve access and repair behind tile",
   },
   {
-    src: "/gallery/water-line.jpg",
+    src: "/gallery/water-line.JPG",
     caption: "Water Line Repair",
     description: "Underground water line replacement",
   },
   {
-    src: "/gallery/sewer-line.jpg",
+    src: "/gallery/sewer-line.JPG",
     caption: "Sewer Line Installation",
     description: "New sewer main installation and trenching",
   },
   {
-    src: "/gallery/foundation.jpg",
+    src: "/gallery/foundation.JPG",
     caption: "New Construction Plumbing",
     description: "Underground rough-in for new construction build",
   },
