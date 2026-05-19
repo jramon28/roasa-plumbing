@@ -56,7 +56,8 @@ Brand Style:
 - Modern blue/black/gold aesthetic
 
 ---
-
+# LOGO
+https://chatgpt.com/backend-api/estuary/content?id=file_00000000bae871f885d84f23557c7cf1&ts=494223&p=fs&cid=1&sig=8a6005566990cf6b1c737b9191cc65ceae24fdc72bbea5c388a333a698ae3399&v=0
 # DEVELOPMENT OBJECTIVES
 
 Claude should prioritize:

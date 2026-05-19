@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Phone, MessageSquare, Menu, X, Zap } from "lucide-react";
+import Image from "next/image";
+import { Phone, MessageSquare, Menu, X } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 const NAV_LINKS = [
@@ -35,16 +36,21 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 shrink-0">
-              <div className="w-9 h-9 bg-gold-500 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-navy-900" strokeWidth={2.5} />
-              </div>
+            <Link href="/" className="shrink-0 flex items-center gap-3 h-full py-2">
+              <Image
+                src="/logo.png"
+                alt="Roasa Plumbing Inc."
+                width={200}
+                height={80}
+                className="h-full w-auto object-contain"
+                priority
+              />
               <div className="leading-tight">
                 <span className="block text-white font-bold text-sm sm:text-base tracking-wide">
-                  ROASA
+                  Roasa Plumbing Inc.
                 </span>
                 <span className="block text-gold-400 text-xs font-medium tracking-wider uppercase">
-                  Plumbing Inc.
+                  Reliable. Honest. Quality Work.
                 </span>
               </div>
             </Link>

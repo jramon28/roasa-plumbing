@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Phone, MapPin, Clock, Zap, Shield } from "lucide-react";
+import Image from "next/image";
+import { Phone, MapPin, Clock, Shield } from "lucide-react";
 import { BUSINESS, SERVICE_AREAS } from "@/lib/constants";
 
 export default function Footer() {
@@ -10,16 +11,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-gold-500 rounded-lg flex items-center justify-center shrink-0">
-                <Zap className="w-5 h-5 text-navy-900" strokeWidth={2.5} />
-              </div>
-              <div className="leading-tight">
-                <span className="block text-white font-bold text-base">ROASA</span>
-                <span className="block text-gold-400 text-xs font-medium tracking-wider uppercase">
-                  Plumbing Inc.
-                </span>
-              </div>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="Roasa Plumbing Inc."
+                width={160}
+                height={70}
+                className="h-14 w-auto object-contain"
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4">
               Licensed and insured plumbing services throughout San Diego County.
