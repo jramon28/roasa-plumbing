@@ -16,7 +16,7 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-14">
           <span className="inline-block text-gold-600 text-sm font-semibold uppercase tracking-wider mb-3">
-            What I Do
+            What We Do
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-4">
             Plumbing Services You Can Count On

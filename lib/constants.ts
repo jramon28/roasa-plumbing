@@ -15,49 +15,49 @@ export const SERVICES = [
   {
     title: "Leak Repairs",
     description:
-      "I provide professional leak repair services for residential and commercial plumbing systems, delivering fast and reliable solutions with quality workmanship on every job.",
+      "We provide professional leak repair services for residential and commercial plumbing systems, delivering fast and reliable solutions with quality workmanship on every job.",
     icon: "Droplets",
     href: "/services/leak-repairs",
   },
   {
     title: "Drain Cleaning",
     description:
-      "I clear clogged sinks, toilets, showers, and main sewer lines quickly and efficiently using hydro-jetting and drain snaking. Dependable results you can count on.",
+      "We clear clogged sinks, toilets, showers, and main sewer lines quickly and efficiently using hydro-jetting and drain snaking. Dependable results you can count on.",
     icon: "Waves",
     href: "/services/drain-cleaning",
   },
   {
     title: "Tank & Tankless Water Heater",
     description:
-      "I install top-quality tank and tankless water heaters including Noritz, Rinnai, and Bradford White, with guaranteed professional installation.",
+      "We install top-quality tank and tankless water heaters including Noritz, Rinnai, and Bradford White, with guaranteed professional installation.",
     icon: "Flame",
     href: "/services/water-heater",
   },
   {
     title: "Water Conditioner",
     description:
-      "I install premium HALO water conditioning systems that remove chlorine, chloramines, VOCs, and contaminants while protecting your plumbing from mineral buildup.",
+      "We install premium HALO water conditioning systems that remove chlorine, chloramines, VOCs, and contaminants while protecting your plumbing from mineral buildup.",
     icon: "Droplets",
     href: "/services/water-conditioner",
   },
   {
     title: "Toilet Repair & Installation",
     description:
-      "I offer toilet repair and installation with reliable performance and long-lasting results. My top recommended brand is TOTO, a premium Japanese fixture.",
+      "We offer toilet repair and installation with reliable performance and long-lasting results. Our top recommended brand is TOTO, a premium Japanese fixture.",
     icon: "Wrench",
     href: "/services/toilet-repairs",
   },
   {
     title: "Sewer Line Repairs",
     description:
-      "Trenchless repair and full sewer line replacement to protect your property. I get it done right without tearing up your yard.",
+      "Trenchless repair and full sewer line replacement to protect your property. We get it done right without tearing up your yard.",
     icon: "Shovel",
     href: "/services/sewer-line",
   },
   {
     title: "Repiping",
     description:
-      "Affordable repiping with financing available. I use the best materials and go above and beyond to ensure the best possible result for your home.",
+      "Affordable repiping with financing available. We use the best materials and go above and beyond to ensure the best possible result for your home.",
     icon: "GitBranch",
     href: "/services/repiping",
   },
@@ -71,7 +71,7 @@ export const SERVICES = [
   {
     title: "Emergency Plumbing",
     description:
-      "Urgent response for burst pipes, severe leaks, and plumbing failures. Call me and I'll get there as fast as possible.",
+      "Urgent response for burst pipes, severe leaks, and plumbing failures. Call us and we'll get there as fast as possible.",
     icon: "AlertTriangle",
     href: "/services/emergency",
   },
@@ -168,27 +168,27 @@ export const FAQS = [
   {
     question: "Do you offer emergency plumbing services?",
     answer:
-      "Yes. For urgent plumbing issues throughout San Diego County, call me directly and I'll get there as fast as possible.",
+      "Yes. For urgent plumbing issues throughout San Diego County, call us directly and we'll get there as fast as possible.",
   },
   {
     question: "Are you licensed and insured?",
     answer:
-      "Absolutely. I hold a California C-36 Plumbing License (#1139229) and carry full liability insurance. You're fully protected on every job.",
+      "Absolutely. We hold a California C-36 Plumbing License (#1139229) and carry full liability insurance. You're fully protected on every job.",
   },
   {
     question: "How quickly can you respond to an emergency?",
     answer:
-      "For most emergency calls in San Diego County, I aim to be on-site within 60 minutes or less. Response time may vary by location and time of day.",
+      "For most emergency calls in San Diego County, we aim to be on-site within 60 minutes or less. Response time may vary by location and time of day.",
   },
   {
     question: "How do I get a quote?",
     answer:
-      "Call me directly or fill out the quote form on this page. I'll get back to you quickly with honest, upfront pricing before any work begins.",
+      "Call us directly or fill out the quote form on this page. We'll get back to you quickly with honest, upfront pricing before any work begins.",
   },
   {
     question: "What areas do you serve?",
     answer:
-      "I serve all of San Diego County including San Diego, Chula Vista, El Cajon, La Mesa, National City, Santee, Spring Valley, Lemon Grove, and surrounding areas.",
+      "We serve all of San Diego County including San Diego, Chula Vista, El Cajon, La Mesa, National City, Santee, Spring Valley, Lemon Grove, and surrounding areas.",
   },
   {
     question: "Do you offer warranties on your work?",

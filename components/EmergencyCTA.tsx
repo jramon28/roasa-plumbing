@@ -13,7 +13,7 @@ export default function EmergencyCTA() {
             <div>
               <h2 className="text-white font-bold text-xl">Plumbing Emergency?</h2>
               <p className="text-white/70 text-sm mt-0.5">
-                Burst pipe, flooding, or no water? Call me and I'll be on my way.
+                Burst pipe, flooding, or no water? Call us and we'll be on our way.
               </p>
             </div>
           </div>

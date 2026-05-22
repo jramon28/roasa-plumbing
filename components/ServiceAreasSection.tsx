@@ -15,8 +15,8 @@ export default function ServiceAreasSection() {
               Serving All of San Diego County
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-8">
-              From Coronado to Alpine, I cover every corner of
-              San Diego County. Wherever you are, I'm close by.
+              From Coronado to Alpine, we cover every corner of
+              San Diego County. Wherever you are, we're close by.
             </p>
 
             {/* Areas grid */}

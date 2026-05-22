@@ -43,7 +43,7 @@ export default function WorkGallery() {
             Real Work
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Jobs I've Done
+            Our Work
           </h2>
           <p className="text-white/60 text-lg max-w-xl mx-auto">
             Every photo is from an actual job in San Diego County. No stock images, no shortcuts.

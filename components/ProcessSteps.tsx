@@ -3,25 +3,25 @@ const STEPS = [
     number: "01",
     title: "Call or Request Online",
     description:
-      "Call me or submit a quote request. I respond quickly and get back to you the same day.",
+      "Call us or submit a quote request. We respond quickly and get back to you the same day.",
   },
   {
     number: "02",
     title: "Get a Clear Quote",
     description:
-      "I assess your issue personally and give you an upfront, honest price. No surprises.",
+      "We assess your issue and give you an upfront, honest price. No surprises.",
   },
   {
     number: "03",
-    title: "I Fix It Right",
+    title: "We Fix It Right",
     description:
-      "I arrive on time, with the right tools, and get the job done with care. No shortcuts.",
+      "We arrive on time, with the right tools, and get the job done with care. No shortcuts.",
   },
   {
     number: "04",
     title: "Guaranteed Satisfaction",
     description:
-      "I don't leave until you're 100% satisfied. Every job is backed by my personal workmanship guarantee.",
+      "We don't leave until you're 100% satisfied. Every job is backed by our workmanship guarantee.",
   },
 ];
 

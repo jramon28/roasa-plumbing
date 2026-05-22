@@ -14,7 +14,7 @@ export default function Testimonials() {
             What Our Customers Say
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Real reviews from real San Diego homeowners. I let my work speak for itself.
+            Real reviews from real San Diego homeowners. We let our work speak for itself.
           </p>
         </div>
 

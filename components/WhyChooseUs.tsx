@@ -20,31 +20,31 @@ const REASONS = [
     icon: Clock,
     title: "Fast Response",
     description:
-      "I pick up my phone and show up. Most calls get me on-site within 60 minutes.",
+      "We pick up the phone and show up. Most calls get us on-site within 60 minutes.",
   },
   {
     icon: DollarSign,
     title: "Upfront Pricing",
     description:
-      "No hidden fees, no surprises. I give you a straight quote before touching anything.",
+      "No hidden fees, no surprises. We give you a straight quote before touching anything.",
   },
   {
     icon: Star,
     title: "5-Star Quality",
     description:
-      "I treat every home like my own. My name is on every job so quality is non-negotiable.",
+      "We treat every home like our own. Our name is on every job so quality is non-negotiable.",
   },
   {
     icon: UserCheck,
     title: "Owner on Every Job",
     description:
-      "You're not getting a random subcontractor. When you call ROASA, I show up personally.",
+      "You're not getting a random subcontractor. When you call ROASA, we show up personally.",
   },
   {
     icon: Phone,
     title: "You Call Me Directly",
     description:
-      "No call centers, no hold music. You reach me directly, emergency or not.",
+      "No call centers, no hold music. You reach us directly, emergency or not.",
   },
 ];
 

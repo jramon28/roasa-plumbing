@@ -41,8 +41,8 @@ export default function QuoteForm() {
               Request a Quote
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-8">
-              Fill out the form and I'll get back to you within one business hour.
-              For urgent issues, call me directly.
+              Fill out the form and we'll get back to you within one business hour.
+              For urgent issues, call us directly.
             </p>
 
             <a
@@ -55,7 +55,7 @@ export default function QuoteForm() {
             <div className="bg-gold-500/10 border border-gold-500/30 rounded-xl p-4">
               <p className="text-gold-600 font-semibold text-sm mb-1">🚨 Plumbing Emergency?</p>
               <p className="text-gold-600/80 text-sm">
-                Don't wait. Call me directly and I'll get there as fast as I can.
+                Don't wait. Call us directly and we'll get there as fast as possible.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function QuoteForm() {
                 <CheckCircle className="w-14 h-14 text-green-500 mb-4" />
                 <h3 className="text-navy-900 font-bold text-2xl mb-2">Request Sent!</h3>
                 <p className="text-gray-500">
-                  I'll be in touch within one business hour. For urgent needs, call{" "}
+                  We'll be in touch within one business hour. For urgent needs, call{" "}
                   <a href={BUSINESS.phoneHref} className="text-navy-700 font-semibold">
                     {BUSINESS.phone}
                   </a>
@@ -193,7 +193,7 @@ export default function QuoteForm() {
                   )}
                 </button>
                 <p className="text-center text-xs text-gray-400">
-                  I respect your privacy. Your info is never shared.
+                  We respect your privacy. Your info is never shared.
                 </p>
               </form>
             )}
