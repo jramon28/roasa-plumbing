@@ -1,492 +1,224 @@
-# workflow.md
-# Plumbing Website Development Workflow
+# Roasa Plumbing Inc. — Website Workflow
 
 ---
 
 # PROJECT OVERVIEW
 
-Business Name:
-ROASA Plumbing & Electrical
+Business Name: Roasa Plumbing Inc.
+Owner: Darell Roasa
+Phone: (619) 452-6911
+Email: roasa.plumbing.electric@gmail.com
+Website: roasaplumbing.com
+License: C-36 License #1139229
+Service Area: San Diego County
+Formspree ID: xkoegzlg
 
 Business Type:
-Owner-operated, 1-man business. The owner personally shows up to every job.
-All copy must use first-person "I/me" language — never "we/our team/technicians."
+Christ-centered, owner-operated, 1-man plumbing business. Darell personally shows up to every job.
+Copy must use first-person "I/me" language. Never use "we/our team/technicians/dispatch."
 
 Primary Goal:
-Generate plumbing service leads, phone calls, and quote requests from local customers.
-
-Target Audience:
-- Homeowners
-- Property managers
-- Small businesses
-- Emergency plumbing customers
-- Remodel / renovation customers
-
-Primary Services:
-- Leak Repairs
-- Drain Cleaning
-- Water Heater Installation
-- Toilet Repairs
-- Sewer Line Repairs
-- Repiping
-- Fixture Installation
-- Emergency Plumbing
-- Commercial Plumbing
-
-Location:
-San Diego, California
-- Chula Vista
-- Coronado
-- El Cajon
-- Imperial Beach
-- La Mesa
-- Lemon Grove
-- La Jolla
-- Santee
-- Pacific Beach
-- Point Loma
-- Mira Mesa
-
-Brand Style:
-- Professional
-- Premium
-- Clean
-- Trustworthy
-- Personal / owner-operated feel
-- Modern blue/black/gold aesthetic
-
----
-# LOGO
-https://chatgpt.com/backend-api/estuary/content?id=file_00000000bae871f885d84f23557c7cf1&ts=494223&p=fs&cid=1&sig=8a6005566990cf6b1c737b9191cc65ceae24fdc72bbea5c388a333a698ae3399&v=0
-# DEVELOPMENT OBJECTIVES
-
-Claude should prioritize:
-
-1. Mobile-first design
-2. Fast loading speed
-3. SEO optimization
-4. High conversion rates
-5. Easy quote requests
-6. Local business credibility
-7. Clear service explanations
-8. Google ranking optimization
-9. Strong call-to-actions
-10. Professional visual hierarchy
+Generate plumbing service leads, phone calls, and quote requests from local San Diego customers.
 
 ---
 
-# RECOMMENDED TECH STACK
-
-Frontend:
-- Next.js
-- React
-- Tailwind CSS
-
-Hosting:
-- Vercel
-
-Forms:
-- Formspree OR Resend API
-
-Maps:
-- Google Maps Embed
-
-Animations:
-- Framer Motion
-
-Icons:
-- Lucide React
-
-SEO:
-- Next SEO
-- Metadata API
-
-Analytics:
-- Google Analytics
-- Google Search Console
-
-Optional:
-- Calendly integration
-- AI chatbot
-- Online estimates
-
----
-
-# WEBSITE STRUCTURE
-
-Required Pages:
-
-1. Home
-2. Services
-3. About
-4. Contact
-5. Emergency Service
-6. Reviews
-7. Service Areas
-8. Gallery
-9. Financing (optional)
-10. Blog (optional for SEO)
-
----
-
-# HOMEPAGE REQUIREMENTS
-
-Hero Section:
-- Strong headline
-- Service area mention
-- CTA button
-- Phone number visible
-- Licensed & insured badge (not 24/7 badge)
-- Trust indicators
-
-Example Headline:
-"Reliable Plumbing Services in San Diego"
-
-Primary CTA:
-- Call Now
-- Request Quote
-- Emergency Service
-
-Hero Must Include:
-- Licensed & insured badge
-- Fast response messaging
-- Owner-operated trust messaging
-- Customer review highlights
-
----
-
-# SERVICE PAGE REQUIREMENTS
-
-Each service page should include:
-
-1. Service overview
-2. Common problems
-3. Benefits
-4. Why choose us
-5. Process steps
-6. FAQ section
-7. Call-to-action
-8. Local SEO keywords
-
-Example:
-"Water Heater Repair in San Diego"
-
-SEO Keywords:
-- plumber near me
-- emergency plumber
-- San Diego plumbing repair
-- drain cleaning San Diego
-- licensed plumber
-
----
-
-# CONTACT PAGE REQUIREMENTS
-
-Must include:
-- Contact form
-- Phone number
-- Email
-- Business hours
-- Service areas
-- Embedded map
-- Emergency contact section
-
-Contact Form Fields:
-- Name
-- Phone
-- Email
-- Service Needed
-- Address
-- Description
-- Preferred Contact Method
-
----
-
-# DESIGN REQUIREMENTS
+# BRAND
 
 Color Palette:
-- Navy Blue
-- Black
-- White
-- Gold Accent
+- Red: #D62828
+- Navy: #0F172A
+- White: #F8FAFC
 
-Typography:
-- Modern sans-serif
-- Clean spacing
-- Large readable headings
+Logo: /public/logo.png
+Tagline: Reliable. Honest. Quality Work.
 
-Visual Style:
-- Professional
-- Premium
-- Minimal clutter
-- Large CTA buttons
-- Strong spacing
-- Rounded cards
-- Subtle shadows
+Typography: Inter (Google Font), modern sans-serif
+Visual Style: Professional, clean, rounded cards, strong CTAs, minimal clutter
 
 ---
 
-# MOBILE RESPONSIVENESS
+# CURRENT TECH STACK
 
-Claude must prioritize:
-- Mobile navigation
-- Large tap targets
-- Fast mobile loading
-- Responsive grids
-- Readable font sizes
-- Sticky mobile call button
-
-Critical:
-Most plumbing traffic comes from mobile users.
-
----
-
-# SEO REQUIREMENTS
-
-Every page should include:
-- Unique title tag
-- Meta description
-- Local keywords
-- Structured headings
-- Internal linking
-- Optimized images
-- Schema markup
-
-Target SEO:
-Local San Diego plumbing searches.
-
-Include:
-- LocalBusiness schema
-- Plumbing service schema
-- FAQ schema
+- Next.js 16 (App Router)
+- React
+- Tailwind CSS v4 (CSS @theme variables)
+- Framer Motion (hero animations)
+- Lucide React (icons)
+- Formspree (quote form — ID: xkoegzlg)
+- Google Maps Embed (service areas section)
+- Vercel (hosting)
+- GitHub (version control)
 
 ---
 
-# TRUST BUILDING ELEMENTS
+# CURRENT PAGE STRUCTURE
 
-Website should prominently display:
-- License number
-- Insurance
-- Reviews
-- Testimonials
-- Before/after photos
-- Owner-on-every-job messaging
-- Warranty information
-- Personal satisfaction guarantee
+Homepage sections (in order):
+1. HeroSection — headline, CTAs, trust badges
+2. QuoteForm — contact/quote form
+3. TrustStrip — badge bar
+4. ServicesSection — service cards grid
+5. WorkGallery — real job photos
+6. WhyChooseUs — about the business + reason cards
+7. ProcessSteps — how it works
+8. Testimonials — customer reviews
+9. EmergencyCTA — emergency call banner
+10. FAQSection — accordion FAQ
+11. ServiceAreasSection — area pills + Google Maps embed
 
-Optional:
-- BBB badge
-- Google review embed
-- Financing options
+Completed pages:
+- / (homepage)
+- /reviews (full reviews page)
 
----
-
-# CONVERSION OPTIMIZATION
-
-Every page should contain:
-- CTA button above fold
-- Sticky contact button
-- Quote request section
-- Emergency call banner (no 24/7 language)
-- Phone number in header
-- Multiple conversion opportunities
-
-Preferred CTAs:
-- Call Now
-- Request Free Estimate
-- Schedule Service
-- Get Emergency Help
+Pages still needed:
+- /services
+- /about
+- /contact
+- /service-areas
 
 ---
 
-# PERFORMANCE REQUIREMENTS
+# NAVIGATION
 
-Claude should optimize for:
-- Lighthouse score above 90
-- Image compression
-- Lazy loading
-- Fast page transitions
-- Minimal unnecessary JavaScript
-- Accessibility compliance
-
----
-
-# IMAGE GUIDELINES
-
-Preferred Images:
-- Real plumbing work
-- Technician photos
-- Clean equipment
-- Before/after projects
-- Service vans
-- Residential plumbing scenes
-
-Avoid:
-- Generic stock photos
-- Low-quality images
-- Overly corporate visuals
+Navbar tabs scroll to homepage sections:
+- Services → /#services
+- About → /#about
+- Service Areas → /#service-areas
+- Reviews → /#reviews
+- Contact → /#contact
 
 ---
 
-# CONTENT WRITING STYLE
+# SERVICES (Current)
 
-Tone:
-- Professional
-- Trustworthy
-- Helpful
-- Clear
-- Confident
-- Personal (owner-operated voice)
+1. Leak Repairs
+2. Drain Cleaning
+3. Tankless Water Heater
+4. Water Conditioner
+5. Toilet Repairs
+6. Sewer Line Repairs
+7. Repiping
+8. Fixture Installation
+9. Emergency Plumbing
+10. Commercial Plumbing
+
+---
+
+# SERVICE DESCRIPTIONS (Revised Copy)
+
+LEAK REPAIR
+I provide professional leak repair services for residential and commercial plumbing systems, delivering fast and reliable solutions. I am committed to quality workmanship and dependable service on every job.
+
+DRAIN CLEANING
+I offer expert drain cleaning services to clear clogged sinks, toilets, showers, and main sewer lines quickly and efficiently. You can count on professional workmanship and dependable results.
+
+TANK AND TANKLESS WATER HEATER
+I install top-quality tank and tankless water heaters, including Noritz, Rinnai, and Bradford White, with guaranteed professional installation.
+
+WHOLE HOUSE FILTER & WATER CONDITIONER
+I install premium water conditioning systems featuring HALO water system products, designed to remove chlorine, chloramines, VOCs, and other contaminants while protecting your plumbing from mineral buildup.
+
+TOILET REPAIR / INSTALLATION
+I offer toilet repair and installation services, ensuring reliable performance, proper installation, and long-lasting results. My top recommended brand is TOTO — a premium Japanese brand.
+
+REPIPING
+My repiping services are affordable and financing is available. I use the best materials and go above and beyond to ensure the best possible result.
+
+ANY PLUMBING FIXTURE INSTALLATION
+Bundle 3 or more fixture installations and receive a good discount. Ask me about package pricing.
+
+---
+
+# CONTENT WRITING RULES
 
 Voice:
-- Always write in first person: "I", "me", "my"
-- Never use: "we", "our team", "our technicians", "we dispatch"
-- The owner personally answers calls, shows up, and does the work
+- Always first person: "I", "me", "my"
+- Never: "we", "our team", "our technicians", "we dispatch"
+- No 24/7 availability claims
+- No em dashes (—) in copy
+- No "free estimate" language
 
-Avoid:
-- Overly technical language
-- Excessive sales language
-- Large text walls
-- Corporate/team language
-- 24/7 availability claims
-
-Focus On:
-- Customer pain points
-- Fast solutions
-- Reliability
-- Trust
-- Personal accountability — the owner's name is on every job
+Tone: Professional, trustworthy, Christ-centered, personal, clear
 
 ---
 
-# FUTURE FEATURES
+# DESIGN RULES
 
-Potential Additions:
-- AI customer support chatbot
-- Online booking
-- Financing calculator
-- Membership plans
-- Customer portal
-- SMS updates
-- Live technician tracking
-
----
-
-# FILE STRUCTURE
-
-/app
-/components
-/public
-/styles
-/lib
-/hooks
-
-Suggested Components:
-- Navbar
-- HeroSection
-- ServiceCard
-- TestimonialCard
-- CTASection
-- Footer
-- QuoteForm
-- FAQAccordion
+- No em dashes in copy
+- No "free estimate" language
+- No 24/7 language
+- No "Learn more" links that go nowhere
+- No email shown publicly
+- CTA buttons: "Call Now" or "Get a Quote"
+- All buttons on red (gold-500) background use white text
 
 ---
 
-# BUSINESS INFORMATION PLACEHOLDERS
+# REAL JOB PHOTOS (WorkGallery)
 
-Business Name:
-ROASA Plumbing & Electrical
-
-Phone:
-(619) 452-6911
-
-Email:
-roasa.plumbing.electric@gmail.com
-
-Website:
-roasaplumbingandelectric.net
-
-License:
-C-36 License #1139229
-
-Service Area:
-San Diego County
+Located in /public/gallery/
+- water-heater.JPG
+- repiping.JPG
+- valve-repair.JPG
+- water-line.JPG
+- sewer-line.JPG
+- foundation.JPG
 
 ---
 
-# CLAUDE INSTRUCTIONS
+# BUSINESS INFO
 
-When generating pages:
-- Prioritize clean UX
-- Optimize for mobile
-- Use semantic HTML
-- Keep code modular
-- Use reusable components
-- Optimize SEO metadata
-- Include strong CTA placement
-- Focus on local lead generation
+About section focuses on the business, not personal life:
+- Christ-centered company
+- 6+ years experience
+- Owner on every job
+- Serving all of San Diego County
+- Husband & father to three daughters (badge only, not in body copy)
 
-When generating copy:
-- Keep paragraphs short
-- Use service-specific keywords
-- Emphasize trust
-- Emphasize response time
-- Emphasize professionalism
+---
 
-When generating layouts:
-- Use modern spacing
-- Keep sections visually separated
-- Maintain consistent branding
-- Prioritize readability
+# COMPLETED UPDATES
 
-# Services
-- 
-# About Me
-- Darell Roasa
-1. Introduction
+1. ✅ Removed free estimates — replaced with "Get a Quote"
+2. ✅ Moved quote form beneath hero
+3. ✅ Removed reviews from homepage (replaced with real Yelp reviews)
+4. ✅ Emergency banner color changed from red to navy
+5. ✅ Domain updated to roasaplumbing.com
+6. ✅ Email removed from public display
+7. ✅ Added Water Conditioner + Tankless Water Heater; removed camera from sewer description
+8. ✅ Text button added next to call button (navbar + hero + sticky mobile)
+9. ✅ Headline: "Reliable Plumbing Services You Can Trust"
+10. ✅ Subheadline: "Christ-centered plumbing company serving San Diego County with over 6 years of experience"
+11. ✅ CTA buttons changed to "Call Now"
+12. ✅ Financing Up to $25,000 added to trust strip
+13. ✅ Business name changed to Roasa Plumbing Inc.
+14. ✅ Color scheme: Red #D62828 / Navy #0F172A / White #F8FAFC
+15. ✅ Real Yelp reviews added (11 reviews)
+16. ✅ Real job photos gallery added
+17. ✅ Google Maps embed added
+18. ✅ Formspree connected (xkoegzlg)
+19. ✅ Nav tabs scroll to homepage sections
+20. ✅ Removed "& Electrical" — now Roasa Plumbing Inc. throughout
+21. ✅ About section rewritten to focus on business
+22. ✅ Retired Military removed from badges
+23. ✅ Logo added (/public/logo.png)
+24. ✅ All em dashes removed from copy
+25. ✅ "Learn more" links removed from service cards
 
-2. Experience
-- 
-3. Philosophy
+---
 
-4. Local/Personal Connection
+# PENDING / FUTURE
 
-5. Call To Action
+- [ ] Build /services page
+- [ ] Build /about page
+- [ ] Build /contact page
+- [ ] Build /service-areas page
+- [ ] Update service descriptions with revised copy (see above)
+- [ ] Add real job photos to gallery
+- [ ] Connect Google Analytics
+- [ ] Add financing page (optional)
+- [ ] Online booking / Calendly (optional)
 
-
-# Service Areas
-- 
-# Reviews
-
-# Contact
-
-# UPDATES
-
-Any updates necessary for the website to be implemented:
-1) Remove any free estimates 
-2) Move quote form tab beneath hero
-3) Remove reviews now so it can be replcaed later
-4) Change color red
-
-5) raosaplumbing.com --> Domain
-6) Remove any emails make any form of
-7) Add Waterconditioner, tankless waterheater, remove camera
-8) Add a text button next to the call button
-
-9) Add a headline:
-Reliable Plumbing Services You can Trust
-
-Subheadline: Christ-centered plumbing company serving San Diego County with over 6 years of experience
-
-10) Change Call to Action button to "Call now"
-
-11) Add "Flexible financing available up to $25000 for qualified customers
-12) Change to Roasa Plumbing Inc.
-
-# New Update
-For the entire website, make the color schematic Red + Navy Blue + White 
-Red: #D62828 Navy: #0F172A White: #F8FAFC
 ---
 
 # END OF FILE

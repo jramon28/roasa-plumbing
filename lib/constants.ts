@@ -15,70 +15,70 @@ export const SERVICES = [
   {
     title: "Leak Repairs",
     description:
-      "Fast detection and repair of pipe leaks, slab leaks, and water line breaks before they cause costly damage.",
+      "I provide professional leak repair services for residential and commercial plumbing systems, delivering fast and reliable solutions with quality workmanship on every job.",
     icon: "Droplets",
     href: "/services/leak-repairs",
   },
   {
     title: "Drain Cleaning",
     description:
-      "Professional hydro-jetting and drain snaking to clear stubborn clogs and keep your drains flowing freely.",
+      "I clear clogged sinks, toilets, showers, and main sewer lines quickly and efficiently using hydro-jetting and drain snaking. Dependable results you can count on.",
     icon: "Waves",
     href: "/services/drain-cleaning",
   },
   {
-    title: "Tankless Water Heater",
+    title: "Tank & Tankless Water Heater",
     description:
-      "Installation and service of tankless water heaters. Endless hot water, lower energy bills, and a longer lifespan than traditional tanks.",
+      "I install top-quality tank and tankless water heaters including Noritz, Rinnai, and Bradford White, with guaranteed professional installation.",
     icon: "Flame",
-    href: "/services/tankless-water-heater",
+    href: "/services/water-heater",
   },
   {
     title: "Water Conditioner",
     description:
-      "Whole-home water conditioning systems to remove hard minerals, improve water quality, and protect your pipes and appliances.",
+      "I install premium HALO water conditioning systems that remove chlorine, chloramines, VOCs, and contaminants while protecting your plumbing from mineral buildup.",
     icon: "Droplets",
     href: "/services/water-conditioner",
   },
   {
-    title: "Toilet Repairs",
+    title: "Toilet Repair & Installation",
     description:
-      "Same-day toilet repair and replacement services, from running toilets to complete fixture upgrades.",
+      "I offer toilet repair and installation with reliable performance and long-lasting results. My top recommended brand is TOTO, a premium Japanese fixture.",
     icon: "Wrench",
     href: "/services/toilet-repairs",
   },
   {
     title: "Sewer Line Repairs",
     description:
-      "Trenchless repair and full sewer line replacement to protect your property.",
+      "Trenchless repair and full sewer line replacement to protect your property. I get it done right without tearing up your yard.",
     icon: "Shovel",
     href: "/services/sewer-line",
   },
   {
     title: "Repiping",
     description:
-      "Full home repiping with copper or PEX pipe, eliminating old corroded lines and improving water pressure.",
+      "Affordable repiping with financing available. I use the best materials and go above and beyond to ensure the best possible result for your home.",
     icon: "GitBranch",
     href: "/services/repiping",
   },
   {
     title: "Fixture Installation",
     description:
-      "Upgrade faucets, sinks, showers, and more with precision installation and a clean, polished finish.",
+      "Bundle 3 or more fixture installations and receive a good discount. Faucets, sinks, showers, and more — installed clean and right the first time.",
     icon: "Settings",
     href: "/services/fixture-installation",
   },
   {
     title: "Emergency Plumbing",
     description:
-      "Urgent response for burst pipes, severe leaks, and plumbing failures. Call me and I'll get there fast.",
+      "Urgent response for burst pipes, severe leaks, and plumbing failures. Call me and I'll get there as fast as possible.",
     icon: "AlertTriangle",
     href: "/services/emergency",
   },
   {
     title: "Commercial Plumbing",
     description:
-      "Comprehensive plumbing services for restaurants, offices, and multi-unit properties across San Diego.",
+      "Professional plumbing services for restaurants, offices, and multi-unit properties across San Diego County.",
     icon: "Building2",
     href: "/services/commercial",
   },

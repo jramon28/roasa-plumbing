@@ -39,7 +39,7 @@ export default function Navbar() {
             <Link href="/" className="shrink-0 flex items-center gap-3 h-full py-2">
               <Image
                 src="/logo.png"
-                alt="Roasa Plumbing Inc."
+                alt="ROASA Plumbing Inc."
                 width={200}
                 height={80}
                 className="h-full w-auto object-contain"
@@ -47,7 +47,7 @@ export default function Navbar() {
               />
               <div className="leading-tight">
                 <span className="block text-white font-bold text-sm sm:text-base tracking-wide">
-                  Roasa Plumbing Inc.
+                  ROASA Plumbing Inc.
                 </span>
                 <span className="block text-gold-400 text-xs font-medium tracking-wider uppercase">
                   Reliable. Honest. Quality Work.

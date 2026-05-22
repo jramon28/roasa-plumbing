@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
                 About Us
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
-                Roasa Plumbing Inc.
+                ROASA Plumbing Inc.
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-4">
                 Roasa Plumbing Inc. is a Christ-centered, owner-operated plumbing company serving homeowners and businesses throughout San Diego County.
