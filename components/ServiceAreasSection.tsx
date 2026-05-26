@@ -1,7 +1,7 @@
 import { MapPin } from "lucide-react";
 import { SERVICE_AREAS } from "@/lib/constants";
 
-export default function ServiceAreasSection() {
+export default function ServiceAreasSection({ areas = SERVICE_AREAS }: { areas?: string[] }) {
   return (
     <section id="service-areas" className="py-20 lg:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +21,7 @@ export default function ServiceAreasSection() {
 
             {/* Areas grid */}
             <div className="flex flex-wrap gap-2 mb-8">
-              {SERVICE_AREAS.map((area) => (
+              {areas.map((area) => (
                 <div
                   key={area}
                   className="flex items-center gap-1.5 bg-white border border-gray-200 rounded-full px-3 py-1.5 hover:border-navy-300 transition-colors"

@@ -1,39 +1,18 @@
 import Image from "next/image";
+import { urlFor } from "@/sanity/lib/image";
+import type { SanityGalleryPhoto } from "@/sanity/lib/queries";
 
-const PHOTOS = [
-  {
-    src: "/gallery/water-heater.JPG",
-    caption: "Water Heater Installation",
-    description: "Bradford White tank install with copper supply lines",
-  },
-  {
-    src: "/gallery/repiping.JPG",
-    caption: "Repiping",
-    description: "Full copper repipe. Old lines out, new lines in.",
-  },
-  {
-    src: "/gallery/valve-repair.JPG",
-    caption: "Leak & Valve Repair",
-    description: "Shower valve access and repair behind tile",
-  },
-  {
-    src: "/gallery/water-line.JPG",
-    caption: "Water Line Repair",
-    description: "Underground water line replacement",
-  },
-  {
-    src: "/gallery/sewer-line.JPG",
-    caption: "Sewer Line Installation",
-    description: "New sewer main installation and trenching",
-  },
-  {
-    src: "/gallery/foundation.JPG",
-    caption: "New Construction Plumbing",
-    description: "Underground rough-in for new construction build",
-  },
+const LOCAL_PHOTOS = [
+  { src: "/gallery/water-heater.JPG", caption: "Water Heater Installation", description: "Bradford White tank install with copper supply lines" },
+  { src: "/gallery/repiping.JPG", caption: "Repiping", description: "Full copper repipe. Old lines out, new lines in." },
+  { src: "/gallery/valve-repair.JPG", caption: "Leak & Valve Repair", description: "Shower valve access and repair behind tile" },
+  { src: "/gallery/water-line.JPG", caption: "Water Line Repair", description: "Underground water line replacement" },
+  { src: "/gallery/sewer-line.JPG", caption: "Sewer Line Installation", description: "New sewer main installation and trenching" },
+  { src: "/gallery/foundation.JPG", caption: "New Construction Plumbing", description: "Underground rough-in for new construction build" },
 ];
 
-export default function WorkGallery() {
+export default function WorkGallery({ sanityPhotos = [] }: { sanityPhotos?: SanityGalleryPhoto[] }) {
+  const useSanity = sanityPhotos.length > 0;
   return (
     <section className="py-20 lg:py-28 bg-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,26 +31,39 @@ export default function WorkGallery() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {PHOTOS.map((photo) => (
-            <div
-              key={photo.src}
-              className="group relative rounded-2xl overflow-hidden bg-navy-800 aspect-[4/5]"
-            >
-              <Image
-                src={photo.src}
-                alt={photo.caption}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <p className="text-white font-bold text-base">{photo.caption}</p>
-                <p className="text-white/60 text-sm mt-0.5">{photo.description}</p>
-              </div>
-            </div>
-          ))}
+          {useSanity
+            ? sanityPhotos.map((photo) => (
+                <div key={photo._id} className="group relative rounded-2xl overflow-hidden bg-navy-800 aspect-[4/5]">
+                  <Image
+                    src={urlFor(photo.photo).width(800).url()}
+                    alt={photo.caption}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <p className="text-white font-bold text-base">{photo.caption}</p>
+                    <p className="text-white/60 text-sm mt-0.5">{photo.description}</p>
+                  </div>
+                </div>
+              ))
+            : LOCAL_PHOTOS.map((photo) => (
+                <div key={photo.src} className="group relative rounded-2xl overflow-hidden bg-navy-800 aspect-[4/5]">
+                  <Image
+                    src={photo.src}
+                    alt={photo.caption}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <p className="text-white font-bold text-base">{photo.caption}</p>
+                    <p className="text-white/60 text-sm mt-0.5">{photo.description}</p>
+                  </div>
+                </div>
+              ))}
         </div>
       </div>
     </section>

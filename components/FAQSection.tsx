@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { FAQS } from "@/lib/constants";
+import type { SanityFaq } from "@/sanity/lib/queries";
 
-export default function FAQSection() {
+export default function FAQSection({ faqs = FAQS as unknown as SanityFaq[] }: { faqs?: SanityFaq[] }) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
@@ -25,7 +26,7 @@ export default function FAQSection() {
 
         {/* Accordion */}
         <div className="space-y-3">
-          {FAQS.map((faq, i) => (
+          {faqs.map((faq, i) => (
             <div
               key={i}
               className={`border rounded-2xl overflow-hidden transition-colors ${

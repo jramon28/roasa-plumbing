@@ -11,6 +11,9 @@ import ServiceAreasSection from "@/components/ServiceAreasSection";
 import EmergencyCTA from "@/components/EmergencyCTA";
 import Testimonials from "@/components/Testimonials";
 import { BUSINESS } from "@/lib/constants";
+import { getServices, getTestimonials, getFaqs, getServiceAreas, getGalleryPhotos } from "@/sanity/lib/queries";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Roasa Plumbing Inc. | Licensed San Diego Plumber",
@@ -67,7 +70,15 @@ const localBusinessSchema = {
   },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [services, testimonials, faqs, areas, galleryPhotos] = await Promise.all([
+    getServices(),
+    getTestimonials(),
+    getFaqs(),
+    getServiceAreas(),
+    getGalleryPhotos(),
+  ]);
+
   return (
     <>
       {/* LocalBusiness structured data */}
@@ -79,14 +90,14 @@ export default function HomePage() {
       <HeroSection />
       <QuoteForm />
       <TrustStrip />
-      <ServicesSection />
-      <WorkGallery />
+      <ServicesSection services={services} />
+      <WorkGallery sanityPhotos={galleryPhotos} />
       <WhyChooseUs />
       <ProcessSteps />
-      <Testimonials />
+      <Testimonials testimonials={testimonials} />
       <EmergencyCTA />
-      <FAQSection />
-      <ServiceAreasSection />
+      <FAQSection faqs={faqs} />
+      <ServiceAreasSection areas={areas} />
     </>
   );
 }

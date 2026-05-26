@@ -1,7 +1,8 @@
 import { Star } from "lucide-react";
 import { TESTIMONIALS } from "@/lib/constants";
+import type { SanityTestimonial } from "@/sanity/lib/queries";
 
-export default function Testimonials() {
+export default function Testimonials({ testimonials = TESTIMONIALS as unknown as SanityTestimonial[] }: { testimonials?: SanityTestimonial[] }) {
   return (
     <section id="reviews" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +21,7 @@ export default function Testimonials() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {TESTIMONIALS.map((t) => (
+          {testimonials.map((t) => (
             <div
               key={t.name}
               className="bg-slate-50 border border-gray-100 rounded-2xl p-6 hover:shadow-lg hover:border-navy-100 transition-all"

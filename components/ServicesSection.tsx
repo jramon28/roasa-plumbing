@@ -3,13 +3,14 @@ import {
   Settings, AlertTriangle, Building2,
 } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
+import type { SanityService } from "@/sanity/lib/queries";
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   Droplets, Waves, Flame, Wrench, Shovel, GitBranch,
   Settings, AlertTriangle, Building2,
 };
 
-export default function ServicesSection() {
+export default function ServicesSection({ services = SERVICES as unknown as SanityService[] }: { services?: SanityService[] }) {
   return (
     <section id="services" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
