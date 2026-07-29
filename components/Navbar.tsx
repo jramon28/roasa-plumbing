@@ -5,16 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, MessageSquare, Menu, X } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
+import type { SanityBusiness } from "@/sanity/lib/queries";
 
-const NAV_LINKS = [
-  { label: "Services", href: "/#services" },
-  { label: "About", href: "/#about" },
-  { label: "Service Areas", href: "/#service-areas" },
-  { label: "Reviews", href: "/#reviews" },
-  { label: "Contact", href: "/#contact" },
-];
-
-export default function Navbar() {
+export default function Navbar({ business = BUSINESS as SanityBusiness }: { business?: SanityBusiness }) {
+  const navLinks = business.navLinks;
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -47,17 +41,17 @@ export default function Navbar() {
               />
               <div className="leading-tight">
                 <span className="block text-white font-bold text-sm sm:text-base tracking-wide">
-                  ROASA Plumbing Inc.
+                  {business.name}
                 </span>
                 <span className="block text-gold-400 text-xs font-medium tracking-wider uppercase">
-                  Reliable. Honest. Quality Work.
+                  {business.tagline}
                 </span>
               </div>
             </Link>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-6">
-              {NAV_LINKS.map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -71,14 +65,14 @@ export default function Navbar() {
             {/* Phone + Text CTAs */}
             <div className="hidden lg:flex items-center gap-3">
               <a
-                href={BUSINESS.textHref}
+                href={business.textHref}
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-sm px-4 py-2.5 rounded-lg transition-colors"
               >
                 <MessageSquare className="w-4 h-4" strokeWidth={2.5} />
                 Text Us
               </a>
               <a
-                href={BUSINESS.phoneHref}
+                href={business.phoneHref}
                 className="flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-bold text-sm px-4 py-2.5 rounded-lg transition-colors"
               >
                 <Phone className="w-4 h-4" strokeWidth={2.5} />
@@ -89,14 +83,14 @@ export default function Navbar() {
             {/* Mobile: text + phone icons + hamburger */}
             <div className="flex lg:hidden items-center gap-2">
               <a
-                href={BUSINESS.textHref}
+                href={business.textHref}
                 className="flex items-center gap-1.5 bg-white/10 border border-white/20 text-white font-semibold text-sm px-3 py-2 rounded-lg"
               >
                 <MessageSquare className="w-4 h-4" strokeWidth={2.5} />
                 <span className="hidden sm:inline">Text</span>
               </a>
               <a
-                href={BUSINESS.phoneHref}
+                href={business.phoneHref}
                 className="flex items-center gap-1.5 bg-gold-500 hover:bg-gold-600 text-white font-bold text-sm px-3 py-2 rounded-lg"
               >
                 <Phone className="w-4 h-4" strokeWidth={2.5} />
@@ -117,7 +111,7 @@ export default function Navbar() {
         {menuOpen && (
           <div className="lg:hidden bg-navy-950 border-t border-white/10">
             <nav className="px-4 py-4 flex flex-col gap-1">
-              {NAV_LINKS.map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -129,14 +123,14 @@ export default function Navbar() {
               ))}
               <div className="mt-3 flex gap-2">
                 <a
-                  href={BUSINESS.textHref}
+                  href={business.textHref}
                   className="flex-1 flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white font-semibold py-3 rounded-lg"
                 >
                   <MessageSquare className="w-4 h-4" strokeWidth={2.5} />
                   Text Us
                 </a>
                 <a
-                  href={BUSINESS.phoneHref}
+                  href={business.phoneHref}
                   className="flex-1 flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-bold py-3 rounded-lg"
                 >
                   <Phone className="w-4 h-4" strokeWidth={2.5} />
@@ -151,14 +145,14 @@ export default function Navbar() {
       {/* Sticky mobile buttons (bottom of screen) */}
       <div className="lg:hidden fixed bottom-4 right-4 z-50 flex gap-2">
         <a
-          href={BUSINESS.textHref}
+          href={business.textHref}
           className="flex items-center gap-2 bg-navy-800 hover:bg-navy-700 border border-white/20 text-white font-bold px-4 py-3.5 rounded-full shadow-lg shadow-black/30 transition-colors"
         >
           <MessageSquare className="w-5 h-5" strokeWidth={2.5} />
           Text
         </a>
         <a
-          href={BUSINESS.phoneHref}
+          href={business.phoneHref}
           className="flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-bold px-5 py-3.5 rounded-full shadow-lg shadow-black/30 transition-colors"
         >
           <Phone className="w-5 h-5" strokeWidth={2.5} />

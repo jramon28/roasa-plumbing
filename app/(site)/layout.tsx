@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { getBusinessInfo, getServiceAreas } from "@/sanity/lib/queries";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -50,17 +51,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export const revalidate = 60;
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [business, serviceAreas] = await Promise.all([getBusinessInfo(), getServiceAreas()]);
+
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="min-h-full flex flex-col antialiased" style={{ fontFamily: "var(--font-inter), Arial, sans-serif" }}>
-        <Navbar />
+        <Navbar business={business} />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer business={business} serviceAreas={serviceAreas} />
       </body>
     </html>
   );

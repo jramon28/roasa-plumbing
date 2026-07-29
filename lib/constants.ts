@@ -9,6 +9,148 @@ export const BUSINESS = {
   serviceArea: "San Diego County",
   city: "San Diego, California",
   formspreeId: "xkoegzlg",
+  tagline: "Reliable. Honest. Quality Work.",
+  navLinks: [
+    { label: "Services", href: "/#services" },
+    { label: "About", href: "/#about" },
+    { label: "Service Areas", href: "/#service-areas" },
+    { label: "Reviews", href: "/#reviews" },
+    { label: "Contact", href: "/#contact" },
+  ],
+  footerDescription:
+    "Licensed and insured plumbing services throughout San Diego County. Fast response, quality work, guaranteed.",
+  footerQuickLinks: [
+    { label: "Services", href: "/services" },
+    { label: "About Us", href: "/about" },
+    { label: "Emergency Service", href: "/contact#emergency" },
+    { label: "Service Areas", href: "/service-areas" },
+    { label: "Reviews", href: "/reviews" },
+    { label: "Contact Us", href: "/contact" },
+  ],
+  hoursWeekday: "Mon–Fri: 7am – 7pm",
+  hoursWeekend: "Sat–Sun: 8am – 5pm",
+  emergencyNote: "Emergency calls welcome",
+};
+
+export const HERO = {
+  badgeText: "Licensed & Insured · San Diego County",
+  headlineLine1: "Reliable Plumbing",
+  headlineHighlight: "Services You",
+  headlineLine3: "Can Trust",
+  subheadline:
+    "Christ-centered plumbing company serving San Diego County with over 6 years of experience.",
+  trustBadges: [
+    { icon: "ShieldCheck", label: "Licensed & Insured" },
+    { icon: "Clock", label: "60-Min Response" },
+    { icon: "Star", label: "5-Star Rated" },
+    { icon: "AlertTriangle", label: "Same-Day Service" },
+  ],
+  sideCardTitle: "Why San Diego Calls Me First",
+  stats: [
+    { value: "Same Day", label: "Service Available" },
+    { value: "60 min", label: "Avg. Response Time" },
+    { value: "5★", label: "Average Rating" },
+    { value: "100%", label: "Satisfaction Guarantee" },
+  ],
+};
+
+export const WHY_CHOOSE_US = {
+  sectionLabel: "About Us",
+  title: "ROASA Plumbing Inc.",
+  paragraphs: [
+    "Roasa Plumbing Inc. is a Christ-centered, owner-operated plumbing company serving homeowners and businesses throughout San Diego County.",
+    "With over 6 years of hands-on experience, we built this business on a simple foundation: show up on time, do the job right, charge a fair price, and treat every customer with respect.",
+    "From leak repairs and drain cleaning to full repiping and water heater installation, Roasa Plumbing is the trusted name San Diego calls when it matters most.",
+  ],
+  ctaText: "Get a Quote",
+  badges: [
+    { icon: "Cross", label: "Christ-Centered" },
+    { icon: "Heart", label: "Husband & Father" },
+    { icon: "Star", label: "6 Years Experience" },
+    { icon: "ShieldCheck", label: "Licensed & Insured" },
+    { icon: "UserCheck", label: "Owner on Every Job" },
+    { icon: "Medal", label: "5-Star Rated" },
+  ],
+  reasonsSectionLabel: "Why ROASA",
+  reasonsTitle: "A Plumber You Can Rely On",
+  reasons: [
+    {
+      icon: "ShieldCheck",
+      title: "Licensed & Insured",
+      description:
+        "California C-36 licensed and fully insured. Every job is protected for your peace of mind and mine.",
+    },
+    {
+      icon: "Clock",
+      title: "Fast Response",
+      description: "We pick up the phone and show up. Most calls get us on-site within 60 minutes.",
+    },
+    {
+      icon: "DollarSign",
+      title: "Upfront Pricing",
+      description: "No hidden fees, no surprises. We give you a straight quote before touching anything.",
+    },
+    {
+      icon: "Star",
+      title: "5-Star Quality",
+      description: "We treat every home like our own. Our name is on every job so quality is non-negotiable.",
+    },
+    {
+      icon: "UserCheck",
+      title: "Owner on Every Job",
+      description: "You're not getting a random subcontractor. When you call ROASA, we show up personally.",
+    },
+    {
+      icon: "Phone",
+      title: "You Call Me Directly",
+      description: "No call centers, no hold music. You reach us directly, emergency or not.",
+    },
+  ],
+};
+
+export const PROCESS_STEPS = {
+  sectionLabel: "How It Works",
+  title: "Getting Help is Simple",
+  subtitle: "Four easy steps stand between you and a fixed plumbing problem.",
+  steps: [
+    {
+      number: "01",
+      title: "Call or Request Online",
+      description: "Call us or submit a quote request. We respond quickly and get back to you the same day.",
+    },
+    {
+      number: "02",
+      title: "Get a Clear Quote",
+      description: "We assess your issue and give you an upfront, honest price. No surprises.",
+    },
+    {
+      number: "03",
+      title: "We Fix It Right",
+      description: "We arrive on time, with the right tools, and get the job done with care. No shortcuts.",
+    },
+    {
+      number: "04",
+      title: "Guaranteed Satisfaction",
+      description: "We don't leave until you're 100% satisfied. Every job is backed by our workmanship guarantee.",
+    },
+  ],
+};
+
+export const EMERGENCY_CTA = {
+  title: "Plumbing Emergency?",
+  description: "Burst pipe, flooding, or no water? Call us and we'll be on our way.",
+  buttonText: "Call Now",
+};
+
+export const TRUST_STRIP = {
+  badges: [
+    { icon: "ShieldCheck", label: "Licensed & Insured" },
+    { icon: "Star", label: "5-Star Google Rating" },
+    { icon: "Clock", label: "Same-Day Service" },
+    { icon: "Award", label: "C-36 State License" },
+    { icon: "DollarSign", label: "Financing Up to $25,000" },
+    { icon: "Wrench", label: "Satisfaction Guaranteed" },
+  ],
 };
 
 export const SERVICES = [

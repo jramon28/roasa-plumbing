@@ -15,6 +15,41 @@ export const businessType = defineType({
     defineField({ name: "serviceArea", title: "Service Area", type: "string" }),
     defineField({ name: "city", title: "City", type: "string" }),
     defineField({ name: "formspreeId", title: "Formspree Form ID", type: "string" }),
+    defineField({ name: "tagline", title: "Nav Tagline", type: "string" }),
+    defineField({
+      name: "navLinks",
+      title: "Nav Links",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({ name: "label", title: "Label", type: "string" }),
+            defineField({ name: "href", title: "Href", type: "string" }),
+          ],
+          preview: { select: { title: "label", subtitle: "href" } },
+        },
+      ],
+    }),
+    defineField({ name: "footerDescription", title: "Footer Description", type: "text", rows: 2 }),
+    defineField({
+      name: "footerQuickLinks",
+      title: "Footer Quick Links",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({ name: "label", title: "Label", type: "string" }),
+            defineField({ name: "href", title: "Href", type: "string" }),
+          ],
+          preview: { select: { title: "label", subtitle: "href" } },
+        },
+      ],
+    }),
+    defineField({ name: "hoursWeekday", title: "Weekday Hours", type: "string" }),
+    defineField({ name: "hoursWeekend", title: "Weekend Hours", type: "string" }),
+    defineField({ name: "emergencyNote", title: "Emergency Note", type: "string" }),
   ],
   preview: {
     select: { title: "name" },

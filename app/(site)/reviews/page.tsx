@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Star } from "lucide-react";
-import { TESTIMONIALS, BUSINESS } from "@/lib/constants";
+import { getTestimonials, getBusinessInfo } from "@/sanity/lib/queries";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Reviews | Roasa Plumbing Inc.",
@@ -8,7 +10,9 @@ export const metadata: Metadata = {
     "Real 5-star reviews from San Diego homeowners. See what customers say about Darell Roasa and Roasa Plumbing Inc.",
 };
 
-export default function ReviewsPage() {
+export default async function ReviewsPage() {
+  const [testimonials, business] = await Promise.all([getTestimonials(), getBusinessInfo()]);
+
   return (
     <>
       {/* Hero */}
@@ -32,7 +36,7 @@ export default function ReviewsPage() {
               ))}
             </div>
             <span className="text-white font-bold text-lg">5.0</span>
-            <span className="text-white/50 text-sm">· {TESTIMONIALS.length} reviews · Yelp</span>
+            <span className="text-white/50 text-sm">· {testimonials.length} reviews · Yelp</span>
           </div>
         </div>
       </section>
@@ -41,7 +45,7 @@ export default function ReviewsPage() {
       <section className="py-16 lg:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
+            {testimonials.map((t) => (
               <div
                 key={t.name}
                 className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-navy-100 transition-all flex flex-col"
@@ -87,13 +91,13 @@ export default function ReviewsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href={BUSINESS.phoneHref}
+              href={business.phoneHref}
               className="flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-bold px-8 py-4 rounded-xl transition-colors"
             >
-              Call Now — {BUSINESS.phone}
+              Call Now — {business.phone}
             </a>
             <a
-              href={BUSINESS.textHref}
+              href={business.textHref}
               className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
             >
               Text Us

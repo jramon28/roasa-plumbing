@@ -30,7 +30,7 @@ export default function ServicesSection({ services = SERVICES as unknown as Sani
 
         {/* Services grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SERVICES.map((service) => {
+          {services.map((service) => {
             const Icon = ICON_MAP[service.icon];
             const isEmergency = service.icon === "AlertTriangle";
             return (

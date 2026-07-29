@@ -13,10 +13,17 @@ export const galleryType = defineType({
     }),
     defineField({ name: "caption", title: "Caption", type: "string" }),
     defineField({ name: "description", title: "Short Description", type: "string" }),
+    defineField({
+      name: "category",
+      title: "Category",
+      type: "string",
+      options: { list: ["Plumbing", "Electrical"] },
+      initialValue: "Plumbing",
+    }),
     defineField({ name: "order", title: "Display Order", type: "number" }),
   ],
   orderings: [{ title: "Display Order", name: "orderAsc", by: [{ field: "order", direction: "asc" }] }],
   preview: {
-    select: { title: "caption", subtitle: "description", media: "photo" },
+    select: { title: "caption", subtitle: "category", media: "photo" },
   },
 });

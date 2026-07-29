@@ -3,8 +3,15 @@
 import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import { BUSINESS, SERVICES } from "@/lib/constants";
+import type { SanityBusiness, SanityService } from "@/sanity/lib/queries";
 
-export default function QuoteForm() {
+export default function QuoteForm({
+  business = BUSINESS as SanityBusiness,
+  services = SERVICES as unknown as SanityService[],
+}: {
+  business?: SanityBusiness;
+  services?: SanityService[];
+}) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -15,7 +22,7 @@ export default function QuoteForm() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch(`https://formspree.io/f/${BUSINESS.formspreeId}`, {
+      const res = await fetch(`https://formspree.io/f/${business.formspreeId}`, {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -46,10 +53,10 @@ export default function QuoteForm() {
             </p>
 
             <a
-              href={BUSINESS.phoneHref}
+              href={business.phoneHref}
               className="inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-bold px-6 py-4 rounded-xl transition-colors mb-6"
             >
-              📞 {BUSINESS.phone}
+              📞 {business.phone}
             </a>
 
             <div className="bg-gold-500/10 border border-gold-500/30 rounded-xl p-4">
@@ -68,8 +75,8 @@ export default function QuoteForm() {
                 <h3 className="text-navy-900 font-bold text-2xl mb-2">Request Sent!</h3>
                 <p className="text-gray-500">
                   We'll be in touch within one business hour. For urgent needs, call{" "}
-                  <a href={BUSINESS.phoneHref} className="text-navy-700 font-semibold">
-                    {BUSINESS.phone}
+                  <a href={business.phoneHref} className="text-navy-700 font-semibold">
+                    {business.phone}
                   </a>
                   .
                 </p>
@@ -125,7 +132,7 @@ export default function QuoteForm() {
                     className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy-500 focus:border-transparent"
                   >
                     <option value="">Select a service...</option>
-                    {SERVICES.map((s) => (
+                    {services.map((s) => (
                       <option key={s.title} value={s.title}>
                         {s.title}
                       </option>
