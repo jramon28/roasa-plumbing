@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Roasa Plumbing Inc.",
   },
   description:
-    "Roasa Plumbing Inc. — Christ-centered, owner-operated plumbing in San Diego County. Drain cleaning, water heaters, repiping, leak repairs, and more. Licensed (C-36 #1139229). Call (619) 452-6911.",
+    "Roasa Plumbing Inc. — Christ-centered, owner-operated plumbing in San Diego County. Drain cleaning, water heaters, repiping, leak repairs, and more. Licensed (C-10 #1139229). Call (619) 452-6911.",
   keywords: [
     "plumber San Diego",
     "plumbing San Diego",

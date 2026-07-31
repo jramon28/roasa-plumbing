@@ -5,7 +5,7 @@ export const BUSINESS = {
   textHref: "sms:6194526911",
   email: "roasa.plumbing.electric@gmail.com",
   website: "roasaplumbing.com",
-  license: "C-36 License #1139229",
+  license: "C-10 License #1139229",
   serviceArea: "San Diego County",
   city: "San Diego, California",
   formspreeId: "xkoegzlg",
@@ -78,7 +78,7 @@ export const WHY_CHOOSE_US = {
       icon: "ShieldCheck",
       title: "Licensed & Insured",
       description:
-        "California C-36 licensed and fully insured. Every job is protected for your peace of mind and mine.",
+        "California C-10 licensed and fully insured. Every job is protected for your peace of mind and mine.",
     },
     {
       icon: "Clock",
@@ -147,7 +147,7 @@ export const TRUST_STRIP = {
     { icon: "ShieldCheck", label: "Licensed & Insured" },
     { icon: "Star", label: "5-Star Google Rating" },
     { icon: "Clock", label: "Same-Day Service" },
-    { icon: "Award", label: "C-36 State License" },
+    { icon: "Award", label: "C-10 State License" },
     { icon: "DollarSign", label: "Financing Up to $25,000" },
     { icon: "Wrench", label: "Satisfaction Guaranteed" },
   ],
@@ -315,7 +315,7 @@ export const FAQS = [
   {
     question: "Are you licensed and insured?",
     answer:
-      "Absolutely. We hold a California C-36 Plumbing License (#1139229) and carry full liability insurance. You're fully protected on every job.",
+      "Absolutely. We hold a California C-10 License (#1139229) and carry full liability insurance. You're fully protected on every job.",
   },
   {
     question: "How quickly can you respond to an emergency?",

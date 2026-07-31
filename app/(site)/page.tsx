@@ -21,7 +21,7 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Roasa Plumbing Inc. | Licensed San Diego Plumber",
   description:
-    "Roasa Plumbing Inc. is a Christ-centered, owner-operated plumbing company serving San Diego County with over 6 years of experience. Licensed (C-36 #1139229) and insured. Call (619) 452-6911.",
+    "Roasa Plumbing Inc. is a Christ-centered, owner-operated plumbing company serving San Diego County with over 6 years of experience. Licensed (C-10 #1139229) and insured. Call (619) 452-6911.",
   alternates: {
     canonical: "https://roasaplumbing.com",
   },

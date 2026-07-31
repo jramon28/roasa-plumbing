@@ -9,7 +9,7 @@ Owner: Darell Roasa
 Phone: (619) 452-6911
 Email: roasa.plumbing.electric@gmail.com
 Website: roasaplumbing.com
-License: C-36 License #1139229
+License: C-10 License #1139229
 Service Area: San Diego County
 Formspree ID: xkoegzlg
 

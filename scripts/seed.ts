@@ -23,7 +23,7 @@ const business = {
   textHref: "sms:6194526911",
   email: "roasa.plumbing.electric@gmail.com",
   website: "roasaplumbing.com",
-  license: "C-36 License #1139229",
+  license: "C-10 License #1139229",
   serviceArea: "San Diego County",
   city: "San Diego, California",
   formspreeId: "xkoegzlg",
@@ -96,7 +96,7 @@ const whyChooseUs = {
   reasonsSectionLabel: "Why ROASA",
   reasonsTitle: "A Plumber You Can Rely On",
   reasons: [
-    { icon: "ShieldCheck", title: "Licensed & Insured", description: "California C-36 licensed and fully insured. Every job is protected for your peace of mind and mine." },
+    { icon: "ShieldCheck", title: "Licensed & Insured", description: "California C-10 licensed and fully insured. Every job is protected for your peace of mind and mine." },
     { icon: "Clock", title: "Fast Response", description: "We pick up the phone and show up. Most calls get us on-site within 60 minutes." },
     { icon: "DollarSign", title: "Upfront Pricing", description: "No hidden fees, no surprises. We give you a straight quote before touching anything." },
     { icon: "Star", title: "5-Star Quality", description: "We treat every home like our own. Our name is on every job so quality is non-negotiable." },
@@ -134,7 +134,7 @@ const trustStrip = {
     { icon: "ShieldCheck", label: "Licensed & Insured" },
     { icon: "Star", label: "5-Star Google Rating" },
     { icon: "Clock", label: "Same-Day Service" },
-    { icon: "Award", label: "C-36 State License" },
+    { icon: "Award", label: "C-10 State License" },
     { icon: "DollarSign", label: "Financing Up to $25,000" },
     { icon: "Wrench", label: "Satisfaction Guaranteed" },
   ],
@@ -169,7 +169,7 @@ const testimonials = [
 
 const faqs = [
   { question: "Do you offer emergency plumbing services?", answer: "Yes. For urgent plumbing issues throughout San Diego County, call us directly and we'll get there as fast as possible.", order: 1 },
-  { question: "Are you licensed and insured?", answer: "Absolutely. We hold a California C-36 Plumbing License (#1139229) and carry full liability insurance. You're fully protected on every job.", order: 2 },
+  { question: "Are you licensed and insured?", answer: "Absolutely. We hold a California C-10 License (#1139229) and carry full liability insurance. You're fully protected on every job.", order: 2 },
   { question: "How quickly can you respond to an emergency?", answer: "For most emergency calls in San Diego County, we aim to be on-site within 60 minutes or less. Response time may vary by location and time of day.", order: 3 },
   { question: "How do I get a quote?", answer: "Call us directly or fill out the quote form on this page. We'll get back to you quickly with honest, upfront pricing before any work begins.", order: 4 },
   { question: "What areas do you serve?", answer: "We serve all of San Diego County including San Diego, Chula Vista, El Cajon, La Mesa, National City, Santee, Spring Valley, Lemon Grove, and surrounding areas.", order: 5 },
