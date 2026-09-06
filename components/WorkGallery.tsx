@@ -11,8 +11,34 @@ const LOCAL_PHOTOS = [
   { src: "/gallery/foundation.JPG", caption: "New Construction Plumbing", description: "Underground rough-in for new construction build" },
 ];
 
+const CATEGORIES = ["Plumbing", "Electrical"];
+
+function PhotoGrid({ photos }: { photos: SanityGalleryPhoto[] }) {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {photos.map((photo) => (
+        <div key={photo._id} className="group relative rounded-2xl overflow-hidden bg-navy-800 aspect-[4/5]">
+          <Image
+            src={urlFor(photo.photo).width(800).url()}
+            alt={photo.caption}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-5">
+            <p className="text-white font-bold text-base">{photo.caption}</p>
+            <p className="text-white/60 text-sm mt-0.5">{photo.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function WorkGallery({ sanityPhotos = [] }: { sanityPhotos?: SanityGalleryPhoto[] }) {
   const useSanity = sanityPhotos.length > 0;
+
   return (
     <section className="py-20 lg:py-28 bg-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,42 +55,39 @@ export default function WorkGallery({ sanityPhotos = [] }: { sanityPhotos?: Sani
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {useSanity
-            ? sanityPhotos.map((photo) => (
-                <div key={photo._id} className="group relative rounded-2xl overflow-hidden bg-navy-800 aspect-[4/5]">
-                  <Image
-                    src={urlFor(photo.photo).width(800).url()}
-                    alt={photo.caption}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <p className="text-white font-bold text-base">{photo.caption}</p>
-                    <p className="text-white/60 text-sm mt-0.5">{photo.description}</p>
-                  </div>
+        {useSanity ? (
+          <div className="space-y-16">
+            {CATEGORIES.map((category) => {
+              const photos = sanityPhotos.filter((p) => (p.category ?? "Plumbing") === category);
+              if (photos.length === 0) return null;
+              return (
+                <div key={category}>
+                  <h3 className="text-white font-bold text-xl mb-6">{category} Work</h3>
+                  <PhotoGrid photos={photos} />
                 </div>
-              ))
-            : LOCAL_PHOTOS.map((photo) => (
-                <div key={photo.src} className="group relative rounded-2xl overflow-hidden bg-navy-800 aspect-[4/5]">
-                  <Image
-                    src={photo.src}
-                    alt={photo.caption}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <p className="text-white font-bold text-base">{photo.caption}</p>
-                    <p className="text-white/60 text-sm mt-0.5">{photo.description}</p>
-                  </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {LOCAL_PHOTOS.map((photo) => (
+              <div key={photo.src} className="group relative rounded-2xl overflow-hidden bg-navy-800 aspect-[4/5]">
+                <Image
+                  src={photo.src}
+                  alt={photo.caption}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="text-white font-bold text-base">{photo.caption}</p>
+                  <p className="text-white/60 text-sm mt-0.5">{photo.description}</p>
                 </div>
-              ))}
-        </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

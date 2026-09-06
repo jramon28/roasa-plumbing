@@ -2,8 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, MapPin, Clock, Shield } from "lucide-react";
 import { BUSINESS, SERVICE_AREAS } from "@/lib/constants";
+import type { SanityBusiness } from "@/sanity/lib/queries";
 
-export default function Footer() {
+export default function Footer({
+  business = BUSINESS as SanityBusiness,
+  serviceAreas = SERVICE_AREAS,
+}: {
+  business?: SanityBusiness;
+  serviceAreas?: string[];
+}) {
   return (
     <footer className="bg-navy-950 text-white">
       {/* Top section */}
@@ -21,12 +28,11 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4">
-              Licensed and insured plumbing services throughout San Diego County.
-              Fast response, quality work, guaranteed.
+              {business.footerDescription}
             </p>
             <div className="flex items-center gap-2 text-xs text-white/50">
               <Shield className="w-4 h-4 text-gold-500 shrink-0" />
-              <span>{BUSINESS.license}</span>
+              <span>{business.license}</span>
             </div>
           </div>
 
@@ -36,14 +42,7 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2.5">
-              {[
-                { label: "Services", href: "/services" },
-                { label: "About Us", href: "/about" },
-                { label: "Emergency Service", href: "/contact#emergency" },
-                { label: "Service Areas", href: "/service-areas" },
-                { label: "Reviews", href: "/reviews" },
-                { label: "Contact Us", href: "/contact" },
-              ].map((link) => (
+              {business.footerQuickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -64,23 +63,23 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href={BUSINESS.phoneHref}
+                  href={business.phoneHref}
                   className="flex items-start gap-2.5 text-white/60 hover:text-gold-400 transition-colors"
                 >
                   <Phone className="w-4 h-4 text-gold-500 shrink-0 mt-0.5" />
-                  <span className="text-sm">{BUSINESS.phone}</span>
+                  <span className="text-sm">{business.phone}</span>
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-gold-500 shrink-0 mt-0.5" />
-                <span className="text-sm text-white/60">{BUSINESS.city}</span>
+                <span className="text-sm text-white/60">{business.city}</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-gold-500 shrink-0 mt-0.5" />
                 <div className="text-sm text-white/60">
-                  <p>Mon–Fri: 7am – 7pm</p>
-                  <p>Sat–Sun: 8am – 5pm</p>
-                  <p className="text-gold-400 font-medium">Emergency calls welcome</p>
+                  <p>{business.hoursWeekday}</p>
+                  <p>{business.hoursWeekend}</p>
+                  <p className="text-gold-400 font-medium">{business.emergencyNote}</p>
                 </div>
               </li>
             </ul>
@@ -92,7 +91,7 @@ export default function Footer() {
               Service Areas
             </h3>
             <div className="flex flex-wrap gap-2">
-              {SERVICE_AREAS.map((area) => (
+              {serviceAreas.map((area) => (
                 <span
                   key={area}
                   className="text-xs text-white/50 bg-white/5 px-2 py-1 rounded"
@@ -109,7 +108,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/40 text-xs text-center sm:text-left">
-            © {new Date().getFullYear()} {BUSINESS.name}. All rights reserved.
+            © {new Date().getFullYear()} {business.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="text-white/40 hover:text-white/60 text-xs transition-colors">
