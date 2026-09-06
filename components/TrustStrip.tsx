@@ -4,7 +4,7 @@ const BADGES = [
   { icon: ShieldCheck, label: "Licensed & Insured" },
   { icon: Star, label: "5-Star Google Rating" },
   { icon: Clock, label: "Same-Day Service" },
-  { icon: Award, label: "C-36 State License" },
+  { icon: Award, label: "C-36 License #1139229" },
   { icon: DollarSign, label: "Financing Up to $25,000" },
   { icon: Wrench, label: "Satisfaction Guaranteed" },
 ];

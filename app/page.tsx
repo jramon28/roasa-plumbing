@@ -10,6 +10,7 @@ import FAQSection from "@/components/FAQSection";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import EmergencyCTA from "@/components/EmergencyCTA";
 import Testimonials from "@/components/Testimonials";
+import BeforeAfterSection from "@/components/BeforeAfterSection";
 import { BUSINESS } from "@/lib/constants";
 import { getServices, getTestimonials, getFaqs, getServiceAreas, getGalleryPhotos } from "@/sanity/lib/queries";
 
@@ -79,6 +80,10 @@ export default async function HomePage() {
     getGalleryPhotos(),
   ]);
 
+  console.log("SANITY_PROJECT_ID:", process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
+  console.log("Testimonials count:", testimonials.length);
+  console.log("First testimonial name:", testimonials[0]?.name);
+
   return (
     <>
       {/* LocalBusiness structured data */}
@@ -92,6 +97,7 @@ export default async function HomePage() {
       <TrustStrip />
       <ServicesSection services={services} />
       <WorkGallery sanityPhotos={galleryPhotos} />
+      <BeforeAfterSection />
       <WhyChooseUs />
       <ProcessSteps />
       <Testimonials testimonials={testimonials} />
