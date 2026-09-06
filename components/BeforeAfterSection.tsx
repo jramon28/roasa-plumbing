@@ -5,15 +5,15 @@ const JOBS = [
     id: "kitchen-leak",
     label: "Kitchen Water Damage & Repair",
     before: [
-      { src: "/gallery/before-after/before-1.JPG", caption: "Severe water damage & mold behind walls" },
-      { src: "/gallery/before-after/before-2.JPG", caption: "Full demolition — rotted subfloor and framing" },
+      { src: "/gallery/before-after/before-1.jpg", caption: "Severe water damage & mold behind walls" },
+      { src: "/gallery/before-after/before-2.jpg", caption: "Full demolition — rotted subfloor and framing" },
     ],
     during: [
-      { src: "/gallery/before-after/during-1.JPG", caption: "New cabinet installation & plumbing rough-in" },
-      { src: "/gallery/before-after/during-2.JPG", caption: "New drywall with supply lines" },
+      { src: "/gallery/before-after/during-1.jpg", caption: "New cabinet installation & plumbing rough-in" },
+      { src: "/gallery/before-after/during-2.jpg", caption: "New drywall with supply lines" },
     ],
     after: [
-      { src: "/gallery/before-after/after-1.JPG", caption: "Finished — new sink, faucet & quartz countertop" },
+      { src: "/gallery/before-after/after-1.jpg", caption: "Finished — new sink, faucet & quartz countertop" },
     ],
   },
 ];
